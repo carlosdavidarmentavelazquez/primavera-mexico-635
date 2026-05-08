@@ -1,0 +1,164 @@
+/* Variables de Color Vibrante */
+:root {
+    --primary-vibrant: #ff6b6b; /* Rojo/rosa cálido vibrante */
+    --secondary-vibrant: #feca57; /* Amarillo brillante */
+    --tertiary-vibrant: #48dbfb; /* Cyan brillante */
+    --quad-vibrant: #1dd1a1; /* Verde brillante */
+    --card-bg-warm: #fffdf7; /* Blanco cálido para tarjetas */
+    --text-dark: #2d3436;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+    background-image: url('https://images.unsplash.com/photo-1464618663641-bbdd760ae84a?auto=format&fit=crop&w=1600&q=80');
+    background-size: cover;
+    background-attachment: fixed;
+    color: var(--text-dark);
+}
+
+header {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 40px 20px;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    position: sticky; /* Se queda fijo al hacer scroll */
+    top: 0;
+    z-index: 1000;
+}
+
+header h1 {
+    font-family: 'Pacifico', cursive; /* Fuente llamativa */
+    font-size: 4rem;
+    color: var(--primary-vibrant);
+    margin: 0 0 20px 0;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--quad-vibrant);
+    font-weight: 700;
+    font-size: 1.2rem;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: var(--primary-vibrant);
+}
+
+main {
+    padding: 40px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Sección de Información de Primavera */
+.info-primavera {
+    background: rgba(255, 255, 255, 0.85);
+    padding: 40px;
+    border-radius: 20px;
+    margin-bottom: 40px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+    border-top: 8px solid var(--secondary-vibrant);
+}
+
+.info-primavera h2 {
+    font-size: 2.5rem;
+    color: var(--secondary-vibrant);
+    margin-top: 0;
+}
+
+.info-primavera p {
+    font-size: 1.2rem;
+    line-height: 1.8;
+}
+
+/* Flexbox Configuración - LLAMATIVA */
+.flex-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+article {
+    flex: 1;
+    min-width: 280px; /* Más ancho para imágenes grandes */
+    background: var(--card-bg-warm);
+    padding: 25px;
+    border-radius: 30px; /* Bordes más redondeados */
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Animación */
+    display: flex;
+    flex-direction: column;
+    border: 4px solid transparent;
+}
+
+article:hover {
+    transform: translateY(-10px); /* Se levanta al pasar el ratón */
+    box-shadow: 0 15px 40px rgba(0,0,0,0.2);
+    border-color: var(--tertiary-vibrant);
+}
+
+/* ESTILOS DE IMÁGENES MÁS GRANDES */
+article img {
+    width: 100%;
+    height: 300px; /* ALTURA SIGNIFICATIVAMENTE MAYOR */
+    border-radius: 20px;
+    object-fit: cover; /* Mantiene la proporción */
+    margin-bottom: 20px;
+    border: 5px solid white; /* Efecto foto */
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+article h3 {
+    font-size: 1.8rem;
+    color: var(--text-dark);
+    margin: 0 0 15px 0;
+    border-bottom: 3px solid var(--quad-vibrant);
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+article p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin: 0;
+}
+
+footer {
+    background: #2d3436; /* Color oscuro para contraste */
+    color: white;
+    text-align: center;
+    padding: 30px;
+    margin-top: 40px;
+    font-size: 1.1rem;
+    border-top: 10px solid var(--primary-vibrant);
+}
+
+footer p { margin: 0; }
+
+/* Media Query para móviles < 800px */
+@media (max-width: 800px) {
+    .flex-container {
+        flex-direction: column;
+        align-items: center;
+    }
+    article {
+        width: 90%;
+        max-width: 400px;
+    }
+    header h1 { font-size: 2.5rem; }
+}
